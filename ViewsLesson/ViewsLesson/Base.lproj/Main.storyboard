@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ViewsLesson" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VXS-9t-qXe">
+                                <rect key="frame" x="0.0" y="200" width="200" height="200"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="K4E-Xn-e60"/>
+                                    <constraint firstAttribute="width" constant="200" id="V7j-UQ-z7U"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POOP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rq4-fN-iQk">
+                                <rect key="frame" x="230" y="200" width="67" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="rP5-50-knS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HAHA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YR5-Tx-WLt">
+                                <rect key="frame" x="230" y="280" width="68" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Mrx-3L-V6S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VXS-9t-qXe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="99y-95-UDp"/>
+                            <constraint firstItem="VXS-9t-qXe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="180" id="Bgj-Q2-RWp"/>
+                            <constraint firstItem="YR5-Tx-WLt" firstAttribute="leading" secondItem="VXS-9t-qXe" secondAttribute="trailing" constant="30" id="Hdm-TF-SYM"/>
+                            <constraint firstItem="YR5-Tx-WLt" firstAttribute="top" secondItem="rq4-fN-iQk" secondAttribute="bottom" constant="40" id="Hvk-qG-sOe"/>
+                            <constraint firstItem="rq4-fN-iQk" firstAttribute="leading" secondItem="VXS-9t-qXe" secondAttribute="trailing" constant="30" id="QbB-yC-f86"/>
+                            <constraint firstItem="rq4-fN-iQk" firstAttribute="top" secondItem="VXS-9t-qXe" secondAttribute="top" id="ki6-Pe-MYw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
