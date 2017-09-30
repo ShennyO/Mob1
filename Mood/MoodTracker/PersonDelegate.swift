@@ -10,4 +10,6 @@ import Foundation
 
 protocol PersonDelegate: class {
     func passPerson(person: Person)
+    
+    func editPerson(person: Person, row: Int)
 }

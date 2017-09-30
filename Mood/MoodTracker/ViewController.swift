@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, PersonDelegate, UITableViewDelegate {
-   
+    
     
     
     @IBOutlet weak var peopleTableView: UITableView!
@@ -19,6 +19,14 @@ class ViewController: UIViewController, UITableViewDataSource, PersonDelegate, U
             peopleTableView.reloadData()
         }
     }
+    
+    func editPerson(person: Person, row: Int) {
+        self.people[row].name = person.name
+        self.people[row].mood = person.mood
+         peopleTableView.reloadData()
+    }
+    
+    
     
     func passPerson(person: Person) {
         people.append(person)
@@ -53,8 +61,10 @@ class ViewController: UIViewController, UITableViewDataSource, PersonDelegate, U
                 let personDetailVC = segue.destination as! PersonDetailViewController
                 personDetailVC.delegate = self
                 let indexPath = peopleTableView.indexPathForSelectedRow?.row
-                personDetailVC.personNameTextField.text = people[indexPath!].name
-                personDetailVC.mood = people[indexPath!].mood 
+                personDetailVC.person = people[indexPath!]
+//                personDetailVC.name = people[indexPath!].name
+//                personDetailVC.mood = people[indexPath!].mood
+                personDetailVC.row = indexPath!
             }
             
         } else {

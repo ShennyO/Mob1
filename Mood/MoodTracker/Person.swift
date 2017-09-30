@@ -10,8 +10,8 @@ import Foundation
 
 class Person {
     
-    let name: String
-    let mood: String
+    var name: String
+    var mood: String
     
     init(name: String, mood: String) {
         self.name = name
