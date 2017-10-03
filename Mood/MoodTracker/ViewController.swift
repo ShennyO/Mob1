@@ -14,7 +14,9 @@ class ViewController: UIViewController, UITableViewDataSource, PersonDelegate, U
     
     @IBOutlet weak var peopleTableView: UITableView!
     
-    var people = [Person]() {
+    var delegate: rowDelegate?
+    
+    var people: [Person] = [] {
         didSet {
             peopleTableView.reloadData()
         }
@@ -60,11 +62,13 @@ class ViewController: UIViewController, UITableViewDataSource, PersonDelegate, U
             } else if identifier == "editPersonMood" {
                 let personDetailVC = segue.destination as! PersonDetailViewController
                 personDetailVC.delegate = self
+                self.delegate = personDetailVC as rowDelegate
                 let indexPath = peopleTableView.indexPathForSelectedRow?.row
-                personDetailVC.person = people[indexPath!]
+                self.delegate?.sendRow(row: indexPath!, person: people[indexPath!])
+                //personDetailVC.person = people[indexPath!]
 //                personDetailVC.name = people[indexPath!].name
 //                personDetailVC.mood = people[indexPath!].mood
-                personDetailVC.row = indexPath!
+                //personDetailVC.row = indexPath!
             }
             
         } else {

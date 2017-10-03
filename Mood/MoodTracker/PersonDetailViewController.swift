@@ -8,7 +8,16 @@
 
 import UIKit
 
-class PersonDetailViewController: UIViewController {
+class PersonDetailViewController: UIViewController, rowDelegate {
+    
+    
+    
+    
+    func sendRow(row: Int, person: Person) {
+        self.row = row
+        self.person = person
+    }
+    
     
     
     @IBOutlet weak var personNameTextField: UITextField!
