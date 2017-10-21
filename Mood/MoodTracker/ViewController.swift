@@ -65,10 +65,7 @@ class ViewController: UIViewController, UITableViewDataSource, PersonDelegate, U
                 self.delegate = personDetailVC as rowDelegate
                 let indexPath = peopleTableView.indexPathForSelectedRow?.row
                 self.delegate?.sendRow(row: indexPath!, person: people[indexPath!])
-                //personDetailVC.person = people[indexPath!]
-//                personDetailVC.name = people[indexPath!].name
-//                personDetailVC.mood = people[indexPath!].mood
-                //personDetailVC.row = indexPath!
+
             }
             
         } else {
